@@ -1,1 +1,23 @@
+Can you pass lambda expressions to a method? When?
 
+Yes, you can pass lambda expressions as arguments to methods in Java. This feature is particularly useful when working with functional interfaces. If a method expects an instance of a functional interface, you can pass a lambda expression representing the implementation of that interface's abstract method.
+
+Here's an example demonstrating how to pass a lambda expression to a method:
+// Functional interface
+interface Calculator {
+    int calculate(int a, int b);
+}
+
+// Method that takes a functional interface as a parameter
+public class LambdaPassingExample {
+    public static void performOperation(int x, int y, Calculator calculator) {
+        int result = calculator.calculate(x, y);
+        System.out.println("Result: " + result);
+    }
+
+    public static void main(String[] args) {
+        // Using lambda expression to implement the functional interface
+        performOperation(5, 3, (a, b) -> a + b); // Passing addition lambda
+        performOperation(7, 2, (a, b) -> a - b); // Passing subtraction lambda
+    }
+}
