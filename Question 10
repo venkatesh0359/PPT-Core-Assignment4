@@ -1,1 +1,27 @@
+Is it mandatory for a lambda expression to have parameters?
 
+No, it is not mandatory for a lambda expression to have parameters. The syntax of a lambda expression allows for three types of lambda expressions:
+
+
+Lambda expression with parameters:
+(parameters) -> { body }
+
+
+Lambda expression with a single parameter:
+parameter -> { body }
+
+
+Lambda expression with no parameters:
+() -> { body }
+
+You can use an empty parameter list when the lambda expression does not require any input. The absence of parameters is denoted by the empty parentheses ().
+
+Here are examples of each type of lambda expression:
+// Lambda expression with parameters
+(int a, int b) -> { return a + b; }
+
+// Lambda expression with a single parameter
+x -> { return x * x; }
+
+// Lambda expression with no parameters
+() -> { System.out.println("Hello, Lambda!"); }
