@@ -1,1 +1,19 @@
+What is the lambda expression of Java 8?
 
+Java 8 introduced lambda expressions, which are anonymous functions that allow you to pass behavior as an argument to a method. Lambda expressions are concise and provide a more functional programming style in Java.
+
+The syntax of a lambda expression is as follows:
+
+(parameters) -> { body }
+
+parameters: The list of parameters the lambda takes. If there are no parameters, you can use empty parentheses (). If there is only one parameter, you can omit the parentheses. For multiple parameters, separate them with commas.
+->: The arrow token, which separates the parameters from the body of the lambda expression.
+{ body }: The body of the lambda, which contains the implementation of the lambda function.
+Here's an example of a lambda expression that represents a simple addition operation:
+// Lambda expression for addition
+(int a, int b) -> { return a + b; }
+// Lambda expression for addition
+(int a, int b) -> { return a + b; }
+This lambda expression takes two integer parameters a and b and returns their sum.
+
+Lambda expressions are commonly used with functional interfaces to provide implementations for their single abstract method in a concise and expressive way.
