@@ -1,1 +1,60 @@
+Write a program to show Interface Example in Java?
+
+// Define the interface
+interface Shape {
+    void draw(); // Abstract method
+    double getArea(); // Abstract method
+}
+
+// Implement the interface
+class Circle implements Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public void draw() {
+        System.out.println("Drawing a circle");
+    }
+
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// Implement the interface
+class Rectangle implements Shape {
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    public void draw() {
+        System.out.println("Drawing a rectangle");
+    }
+
+    public double getArea() {
+        return length * width;
+    }
+}
+
+// Main class
+public class InterfaceExample {
+    public static void main(String[] args) {
+        // Create objects of Circle and Rectangle
+        Circle circle = new Circle(5.0);
+        Rectangle rectangle = new Rectangle(4.0, 6.0);
+
+        // Call methods on the objects
+        circle.draw();
+        System.out.println("Circle area: " + circle.getArea());
+
+        rectangle.draw();
+        System.out.println("Rectangle area: " + rectangle.getArea());
+    }
+}
 
