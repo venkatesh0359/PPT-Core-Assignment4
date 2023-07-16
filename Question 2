@@ -1,1 +1,44 @@
+Write a program with 2 concrete methods and 2 abstract methods in Java?
+
+// Abstract class
+abstract class AbstractClass {
+    // Concrete method
+    public void concreteMethod1() {
+        System.out.println("This is concrete method 1.");
+    }
+
+    // Concrete method
+    public void concreteMethod2() {
+        System.out.println("This is concrete method 2.");
+    }
+
+    // Abstract method
+    public abstract void abstractMethod1();
+
+    // Abstract method
+    public abstract void abstractMethod2();
+}
+
+// Subclass extending the abstract class
+class Subclass extends AbstractClass {
+    // Implementing the abstract methods
+    public void abstractMethod1() {
+        System.out.println("Implementing abstract method 1.");
+    }
+
+    public void abstractMethod2() {
+        System.out.println("Implementing abstract method 2.");
+    }
+}
+
+// Main class
+public class AbstractExample {
+    public static void main(String[] args) {
+        Subclass subclass = new Subclass();
+        subclass.concreteMethod1();
+        subclass.concreteMethod2();
+        subclass.abstractMethod1();
+        subclass.abstractMethod2();
+    }
+}
 
